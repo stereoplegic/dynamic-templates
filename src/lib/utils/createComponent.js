@@ -4,14 +4,14 @@ const errorHandling = require('./errorHandling');
 const { componentSuccess } = require('./successMessages');
 
 
-exports.createComponent = ({path, name, type}) => {
+exports.createComponent = ({path, name, type, wrapper}) => {
     const pathToCreate = `${path}/${name}`;
 
     try {
         // TODO: create recursive method to mkdir all dirs not in path
         fs.mkdirSync(pathToCreate);
 
-        const component = getTypeOfComponent({name, type});
+        const component = getTypeOfComponent({name, type, wrapper});
         const newFile = `${path}/${name}/index.js`;
 
         fs.writeFileSync(newFile, component);

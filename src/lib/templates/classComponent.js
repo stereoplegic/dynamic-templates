@@ -1,4 +1,4 @@
-module.exports = ({name}) => `import React, { Component } from 'react';
+module.exports = ({name, wrapper='section'}) => `import React, { Component } from 'react';
 // import { } from 'prop-types';
 
 class ${name} extends Component {
@@ -16,9 +16,9 @@ class ${name} extends Component {
 
     render(props) {
         return (
-            <section>
+            <${wrapper}>
             {/* Place component details here */}
-            </section>
+            </${wrapper}>
         )
     }
 }

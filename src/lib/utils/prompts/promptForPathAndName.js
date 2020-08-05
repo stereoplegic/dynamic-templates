@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const chalk = require('chalk');
-const {createComponent} = require('../createComponent');
-const {getCurrentPath} = require('../getCurrentPath');
+const promptForWrapperTag = require('./promptForWrapperTag');
 
 module.exports = () => inquirer.prompt([
     {
@@ -16,6 +15,6 @@ module.exports = () => inquirer.prompt([
         if (!path || !name) {
             console.log(chalk.red('Path and Name are not defined, Please try again.'));
         } else {
-            createComponent({path: `${getCurrentPath()}/${path}`, name, type: 'functional'});
+            return promptForWrapperTag({path, name});
         }
     });

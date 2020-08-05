@@ -1,11 +1,11 @@
 const classComponent = require('../templates/classComponent');
 const {functional} = require('../templates/functional');
 
-module.exports = ({type, name}) => {
+module.exports = ({type, name, wrapper}) => {
     switch(type) {
         case 'class':
-            return classComponent({name});
+            return classComponent({name, wrapper});
         default:
-            return functional({name});
+            return functional({name, wrapper});
     }
 };
