@@ -1,1 +1,1 @@
-exports.getCurrentPath = () => process.cwd();
+exports.getCurrentPath = () => process.cwd()

@@ -1,6 +1,5 @@
 module.exports = ({ title }) => {
-
-    return `<!doctype html>
+	return `<!doctype html>
 
 <html lang="en">
     <head>
@@ -26,5 +25,5 @@ module.exports = ({ title }) => {
         </footer>
     </body>
 </html>
-    `;
+    `
 }

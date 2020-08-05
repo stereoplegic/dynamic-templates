@@ -1,6 +1,6 @@
 exports.functional = ({ name, wrapper }) => {
-    console.log(wrapper)
-    return `import React from 'react';
+	console.log(wrapper)
+	return `import React from 'react';
 // import { } from 'prop-types';
 
 const ${name} = (props) => {
@@ -16,4 +16,5 @@ ${name}.propTypes = {
 };
 
 export default ${name};
-`};
+`
+}

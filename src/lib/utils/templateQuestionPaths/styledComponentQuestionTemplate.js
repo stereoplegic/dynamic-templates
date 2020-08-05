@@ -1,1 +1,1 @@
-module.exports = () => ('Styled Component List Template Coming Soon...');
+module.exports = () => 'Styled Component List Template Coming Soon...'
