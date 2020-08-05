@@ -2,14 +2,14 @@ const fs = require('fs');
 const getTypeOfComponent = require('./getTypeOfComponent');
 const errorHandling = require('./errorHandling');
 const { componentSuccess } = require('./successMessages');
+const recursiveMkdir = require('./recursive-mkdir');
 
 
 exports.createComponent = ({path, name, type, wrapper}) => {
     const pathToCreate = `${path}/${name}`;
 
     try {
-        // TODO: create recursive method to mkdir all dirs not in path
-        fs.mkdirSync(pathToCreate);
+        recursiveMkdir(pathToCreate);
 
         const component = getTypeOfComponent({name, type, wrapper});
         const newFile = `${path}/${name}/index.js`;
