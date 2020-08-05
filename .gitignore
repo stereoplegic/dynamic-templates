@@ -1,3 +1,6 @@
+# Components directory for local testing
+src/components
+
 # Logs
 logs
 *.log

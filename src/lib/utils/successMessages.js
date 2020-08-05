@@ -8,4 +8,4 @@ exports.componentSuccess = ({path, name, type}) => {
     console.log('\n');
 
     return null;
-}
+};

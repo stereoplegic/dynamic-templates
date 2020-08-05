@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const yargs = require('yargs');
-const chalk = require('chalk');
 const {createComponent} = require('./lib/utils/createComponent');
 const {getCurrentPath} = require('./lib/utils/getCurrentPath');
 
