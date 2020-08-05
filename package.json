@@ -1,8 +1,12 @@
 {
   "name": "component-template-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react component builder cli",
-  "bin": "./src/index.js",
+  "bin": {
+    "create": "./src/index.js",
+    "help": "./src/help.js",
+    "version": "./src/version.js"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +23,7 @@
   "homepage": "https://github.com/jthomps838/react-component-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "inquirer": "^7.3.3",
     "yargs": "^15.4.1"
   }
 }

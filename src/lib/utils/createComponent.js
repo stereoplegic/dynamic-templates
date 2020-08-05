@@ -13,7 +13,7 @@ exports.createComponent = ({path, name, type}) => {
 
         const component = getTypeOfComponent({name, type});
         const newFile = `${path}/${name}/index.js`;
-        
+
         fs.writeFileSync(newFile, component);
 
         return componentSuccess({path, name, type});
