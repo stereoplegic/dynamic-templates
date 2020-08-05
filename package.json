@@ -19,7 +19,6 @@
   "homepage": "https://github.com/jthomps838/react-component-cli#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "esm": "^3.2.25",
     "yargs": "^15.4.1"
   }
 }
