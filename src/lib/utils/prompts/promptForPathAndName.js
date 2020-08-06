@@ -1,14 +1,14 @@
 const inquirer = require('inquirer')
-const chalk = require('chalk')
 const promptForWrapperTag = require('./promptForWrapperTag')
+const { errorMessage } = require('../messages')
 
-module.exports = () =>
+module.exports = (packages) => {
 	inquirer
 		.prompt([
 			{
 				name: 'path',
 				message:
-					'Type a path from currenty directory that you wish to use for component.\n',
+					'Type a path from the current working directory for component placement.\n',
 			},
 			{
 				name: 'name',
@@ -17,10 +17,9 @@ module.exports = () =>
 		])
 		.then(({ path, name }) => {
 			if (!path || !name) {
-				console.log(
-					chalk.red('Path and Name are not defined, Please try again.'),
-				)
+				errorMessage('Path or Name are not defined, Please try again.')
 			} else {
-				return promptForWrapperTag({ path, name })
+				return promptForWrapperTag({ path, name, packages })
 			}
 		})
+}

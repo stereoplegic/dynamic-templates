@@ -1,21 +1,19 @@
 const chalk = require('chalk')
+const { errorMessage, errorPath } = require('./messages')
 
-module.exports = ({ errno, code, path }) => {
-	console.log('\n')
+module.exports = (error) => {
+	const { errno, code, path } = error
 	switch (code) {
 		case 'EEXIST':
-			console.log(chalk.bold.red('File Already Exists: '), chalk.red(path))
+			errorMessage(`File Already Exists: ${code}`)
+			errorPath(path)
 			break
 		case 'ENOENT':
-			console.log(
-				chalk.bold.red('No Such File or Directory Exists: '),
-				chalk.red(path),
-			)
+			errorMessage(`No Such File or Directory Exists: ${code}`)
+			errorPath(path)
 			break
 		default:
-			console.log(
-				chalk.red(`Unknow Error- Error Number: ${errno}, Code: ${code}`),
-			)
+			console.log(error)
+			errorMessage(`Unknow Error- Error Number: ${errno}, Code: ${code}`)
 	}
-	console.log('\n')
 }
