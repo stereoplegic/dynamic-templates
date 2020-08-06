@@ -1,16 +1,28 @@
 # dynamic-templates
 
-### Why build this tool?
+## Why build this tool?
 
-This CLI is used to generate multiple types of files
+This CLI is used to generate multiple types of files to make a developers life easier.
 
 ## Working Template Generators
 
-✔️ Functional Component (React) - (adds test file with react-testing-library)
+### Functional Component (React)
 
-✔️ Class Component (React) - (adds test file with react-testing-library)
+✔️ dynamic imports
+✔️ hooks supported
+✔️ test file generation with react-testing-library
+❌ npm installs based on dynamic imports (coming soon)
 
-✔️ HTML
+### Class Component (React)
+
+✔️ dynamic imports
+✔️ lifecycle method support
+✔️ test file generation with react-testing-library
+
+### HTML
+
+✔️ title of page
+✔️ multiple html files generated in loop
 
 ## Support Coming Soon
 
