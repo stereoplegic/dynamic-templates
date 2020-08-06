@@ -1,6 +1,6 @@
 {
 	"name": "dynamic-templates",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "react component builder cli",
 	"bin": "./src/index.js",
 	"main": "src/index.js",
@@ -12,7 +12,7 @@
 		"type": "git",
 		"url": "git+https://github.com/jthomps838/dynamic-templates.git"
 	},
-	"author": "Joseph Thompson",
+	"author": "Joseph Thompson - joseph@josephmt.com",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/jthomps838/dynamic-templates/issues"

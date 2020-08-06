@@ -1,11 +1,11 @@
 const chalk = require('chalk')
 const figlet = require('figlet')
 
-const versionHandler = () => {
+const versionHandler = async () => {
 	const packageJSON = require('../../../package.json')
 
-	figlet(
-		`${packageJSON.name}`,
+	await figlet(
+		`dynamic`,
 		{
 			horizontalLayout: 'fitted',
 			verticalLayout: 'fitted',
@@ -17,7 +17,22 @@ const versionHandler = () => {
 				return
 			}
 			console.log(chalk.bold.green(data))
-			console.log(chalk.bold.yellow(`version: ${packageJSON.version}`))
+			figlet(
+				`-templates`,
+				{
+					horizontalLayout: 'fitted',
+					verticalLayout: 'fitted',
+				},
+				(err, data) => {
+					if (err) {
+						console.log('Something went wrong...')
+						console.dir(err)
+						return
+					}
+					console.log(chalk.bold.green(data))
+					console.log(chalk.bold.yellow(`version: ${packageJSON.version}`))
+				},
+			)
 		},
 	)
 }
