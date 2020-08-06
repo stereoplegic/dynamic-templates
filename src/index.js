@@ -6,7 +6,7 @@ const versionHandler = require('./lib/utils/versionHandler')
 
 yargs.command({
 	command: 'create',
-	describe: 'Create a react component',
+	describe: 'Create a file from list of possibilities',
 	handler: () => {
 		inquirer
 			.prompt([
@@ -34,6 +34,11 @@ yargs.command({
 	command: 'version',
 	describe: 'Fetches version of cli',
 	handler: versionHandler,
+})
+
+yargs.command({
+	command: 'help',
+	describe: 'Help Menu',
 })
 
 yargs.parse()

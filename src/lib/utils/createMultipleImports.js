@@ -17,7 +17,7 @@ const createMultipleImports = ({ hasImports, packages = {}, type }) => {
 				} else {
 					cachedImports[package] = { imports, isNamed }
 
-					successMessage('Imports successfully attached to Component')
+					successMessage('\n** Imports successfully attached to Component **\n')
 					return promptForPathAndName({ packages: cachedImports, type })
 				}
 			},

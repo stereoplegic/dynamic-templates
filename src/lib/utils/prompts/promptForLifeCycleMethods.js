@@ -39,7 +39,9 @@ module.exports = ({ path, name, packages, type, wrapper }) => {
 			},
 		])
 		.then(({ classMethods = [], functionMethods = [] }) => {
-			successMessage(`Methods successfully attached to ${name} component`)
+			successMessage(
+				`\n** Methods successfully attached to ${name} component **\n`,
+			)
 			createComponent({
 				path: `${getCurrentPath()}/${path}`,
 				name,
