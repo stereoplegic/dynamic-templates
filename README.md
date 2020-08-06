@@ -14,6 +14,8 @@ This CLI is used to generate multiple types of files
 
 ## Support Coming Soon
 
-CSS files
-JS Helper files
-Styled Components (boilerplate for an array of [name, tag name] components)
+❌ CSS files
+
+❌ JS Helper files
+
+❌ Styled Components (boilerplate for an array of [name, tag name] components)
