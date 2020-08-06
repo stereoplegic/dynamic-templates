@@ -29,7 +29,7 @@ module.exports = ({ path, name, packages, type, wrapper }) => {
 				choices: [
 					'useState',
 					'useEffect',
-					'useContent',
+					'useContext',
 					'useReducer',
 					'useMemo',
 					'useRef',
