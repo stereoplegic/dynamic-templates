@@ -5,13 +5,28 @@ const { fileSuccess, componentSuccess } = require('../messages')
 const recursiveMkdir = require('../recursive-mkdir')
 const createTest = require('./createTest')
 
-exports.createComponent = ({ path, name, type, wrapper, packages }) => {
+exports.createComponent = ({
+	path,
+	name,
+	type,
+	wrapper,
+	packages,
+	classMethods,
+	functionMethods,
+}) => {
 	const pathToCreate = `${path}/${name}`
 
 	try {
 		recursiveMkdir(pathToCreate)
 
-		const component = getTypeOfComponent({ name, type, wrapper, packages })
+		const component = getTypeOfComponent({
+			name,
+			type,
+			wrapper,
+			packages,
+			classMethods,
+			functionMethods,
+		})
 		const newFile = `${path}/${name}/index.jsx`
 
 		fs.writeFileSync(newFile, component)

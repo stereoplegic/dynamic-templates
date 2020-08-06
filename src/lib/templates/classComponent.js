@@ -1,4 +1,9 @@
-module.exports = ({ name, wrapper = 'section', packages = {} }) => {
+module.exports = ({
+	name,
+	wrapper = 'section',
+	packages = {},
+	classMethods,
+}) => {
 	const packagesArray = []
 
 	for (const key in packages) {
@@ -21,9 +26,40 @@ class ${name} extends Component {
         }
     }
 
-    componentDidMount() {
+    ${
+			classMethods.includes('ComponentDidMount') &&
+			`componentDidMount() {
 
-    }
+    }`
+		}
+
+    ${
+			classMethods.includes('GetDerivedStateFromProps') &&
+			`static getDerivedStateFromProps (props, state) {
+
+    }`
+		}
+
+    ${
+			classMethods.includes('ComponentDidUpdate') &&
+			`componentDidUpdate(prevProps) {
+
+    }`
+		}
+
+    ${
+			classMethods.includes('ShouldComponentUpdate') &&
+			`shouldComponentUpdate(nextProps, nextState) {
+
+    }`
+		}
+
+    ${
+			classMethods.includes('ComponentWillUnmount') &&
+			`componentWillUnmount() {
+
+    }`
+		}
 
     render(props) {
         return (

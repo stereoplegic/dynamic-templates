@@ -1,4 +1,4 @@
-module.exports = ({ name, wrapper, packages = {} }) => {
+module.exports = ({ name, wrapper, packages = {}, functionMethods = [] }) => {
 	const packagesArray = []
 
 	for (const key in packages) {
@@ -9,7 +9,9 @@ module.exports = ({ name, wrapper, packages = {} }) => {
 		}
 	}
 
-	return `import React from 'react';
+	return `import React${
+		functionMethods.length && `, { ${functionMethods.join(', ')}} `
+	} from 'react';
 // import { } from 'prop-types';
 ${packagesArray.join('')}
 

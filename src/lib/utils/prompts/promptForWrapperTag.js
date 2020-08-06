@@ -1,6 +1,5 @@
 const inquirer = require('inquirer')
-const { createComponent } = require('../generators/createComponent')
-const { getCurrentPath } = require('../getCurrentPath')
+const promptForLifeCycleMethods = require('./promptForLifeCycleMethods')
 
 module.exports = ({ path, name, packages, type }) => {
 	inquirer
@@ -11,12 +10,6 @@ module.exports = ({ path, name, packages, type }) => {
 			},
 		])
 		.then(({ wrapper }) => {
-			createComponent({
-				path: `${getCurrentPath()}/${path}`,
-				name,
-				type,
-				wrapper,
-				packages,
-			})
+			return promptForLifeCycleMethods({ path, name, packages, type })
 		})
 }
