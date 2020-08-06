@@ -38,7 +38,7 @@ module.exports = ({ path, name, packages, type, wrapper }) => {
 					type === 'functional' && lifeCycleMethods,
 			},
 		])
-		.then(({ classMethods = [], functionMethods = [] }) => {
+		.then(({ lifeCycleMethods, classMethods = [], functionMethods = [] }) => {
 			successMessage(
 				`\n** Methods successfully attached to ${name} component **\n`,
 			)

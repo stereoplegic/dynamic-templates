@@ -11,8 +11,8 @@ module.exports = ({
 }) => {
 	switch (type) {
 		case 'class':
-			return classComponent({ name, wrapper, packages, classMethods })
+			return classComponent({ name, wrapper, packages, classMethods, type })
 		default:
-			return functional({ name, wrapper, packages, functionMethods })
+			return functional({ name, wrapper, packages, functionMethods, type })
 	}
 }

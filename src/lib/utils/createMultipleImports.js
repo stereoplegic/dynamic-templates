@@ -13,6 +13,7 @@ const createMultipleImports = ({ hasImports, packages = {}, type }) => {
 					return createMultipleImports({
 						hasImports: hasMultiple,
 						packages: cachedImports,
+						type,
 					})
 				} else {
 					cachedImports[package] = { imports, isNamed }
