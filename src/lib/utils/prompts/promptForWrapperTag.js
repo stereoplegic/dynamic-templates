@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const { createComponent } = require('../generators/createComponent')
 const { getCurrentPath } = require('../getCurrentPath')
 
-module.exports = ({ path, name, packages }) => {
+module.exports = ({ path, name, packages, type }) => {
 	inquirer
 		.prompt([
 			{
@@ -14,7 +14,7 @@ module.exports = ({ path, name, packages }) => {
 			createComponent({
 				path: `${getCurrentPath()}/${path}`,
 				name,
-				type: 'functional',
+				type,
 				wrapper,
 				packages,
 			})

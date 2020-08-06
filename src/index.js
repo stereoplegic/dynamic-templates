@@ -2,6 +2,7 @@
 const yargs = require('yargs')
 const inquirer = require('inquirer')
 const templateQuestionPaths = require('./lib/utils/templateQuestionPaths')
+const versionHandler = require('./lib/utils/versionHandler')
 
 yargs.command({
 	command: 'create',
@@ -27,6 +28,12 @@ yargs.command({
 				return templateQuestionPaths(template)
 			})
 	},
+})
+
+yargs.command({
+	command: 'version',
+	describe: 'Fetches version of cli',
+	handler: versionHandler,
 })
 
 yargs.parse()

@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const promptForWrapperTag = require('./promptForWrapperTag')
 const { errorMessage } = require('../messages')
 
-module.exports = (packages) => {
+module.exports = ({ packages = {}, type }) => {
 	inquirer
 		.prompt([
 			{
@@ -19,7 +19,7 @@ module.exports = (packages) => {
 			if (!path || !name) {
 				errorMessage('Path or Name are not defined, Please try again.')
 			} else {
-				return promptForWrapperTag({ path, name, packages })
+				return promptForWrapperTag({ path, name, packages, type })
 			}
 		})
 }

@@ -1,5 +1,5 @@
 const classComponent = require('../templates/classComponent')
-const { functional } = require('../templates/functional')
+const functional = require('../templates/functional')
 
 module.exports = ({ type, name, wrapper, packages }) => {
 	switch (type) {

@@ -1,4 +1,4 @@
-exports.functional = ({ name, wrapper, packages = {} }) => {
+module.exports = ({ name, wrapper, packages = {} }) => {
 	const packagesArray = []
 
 	for (const key in packages) {

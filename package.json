@@ -1,30 +1,26 @@
 {
-	"name": "template-generator",
+	"name": "dynamic-templates",
 	"version": "0.0.1",
 	"description": "react component builder cli",
-	"bin": {
-		"create": "./src/index.js",
-		"help": "./src/help.js",
-		"version": "./src/version.js"
-	},
+	"bin": "./src/index.js",
 	"main": "src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/jthomps838/react-component-cli.git"
+		"url": "git+https://github.com/jthomps838/dynamic-templates.git"
 	},
 	"author": "Joseph Thompson",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/jthomps838/react-component-cli/issues"
+		"url": "https://github.com/jthomps838/dynamic-templates/issues"
 	},
-	"homepage": "https://github.com/jthomps838/react-component-cli#readme",
+	"homepage": "https://github.com/jthomps838/dynamic-templates#readme",
 	"dependencies": {
 		"chalk": "^4.1.0",
+		"figlet": "^1.5.0",
 		"inquirer": "^7.3.3",
-		"npm": "^6.14.7",
 		"yargs": "^15.4.1"
 	}
 }
